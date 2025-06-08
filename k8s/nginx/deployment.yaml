@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:latest
+        image: docker.1ms.run/nginx:latest
         ports:
         - containerPort: 80
