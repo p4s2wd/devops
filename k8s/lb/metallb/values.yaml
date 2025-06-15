@@ -1,6 +1,0 @@
-configInline:
-  address-pools:
-    - name: lb-mylab-pool
-      protocol: layer2
-      addresses:
-        - 192.168.2.80-192.168.2.99

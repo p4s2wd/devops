@@ -6,13 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://metallb.github.io/metallb
-    targetRevision: 0.15.2
-    helm:
-      valueFiles:
-        - values.yaml
-      releaseName: metallb
-    chart: metallb
+    repoURL: https://github.com/metallb/metallb.git
+    targetRevision: v0.15.2
+    path: config/manifests
   destination:
     server: https://kubernetes.default.svc
     namespace: metallb-system
@@ -20,13 +16,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
-      allowEmpty: false
     syncOptions:
     - CreateNamespace=true
-    - ApplyOutOfSyncOnly=true
-    retry:
-      limit: 5
-      backoff:
-        duration: 5s
-        factor: 2
-        maxDuration: 3m
