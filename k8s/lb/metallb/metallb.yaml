@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/p4s2wd/devops.git
     targetRevision: main
-    path: k8s/lb/metallb
+    path: k8s/lb/metallb/metallb.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: metallb-system
