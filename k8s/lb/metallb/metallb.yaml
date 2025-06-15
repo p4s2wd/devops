@@ -6,9 +6,13 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/p4s2wd/devops.git
-    targetRevision: main
-    path: k8s/lb/metallb/metallb.yaml
+    repoURL: https://metallb.github.io/metallb
+    targetRevision: latest
+    helm:
+      valueFiles:
+        - values.yaml
+      releaseName: metallb
+      chart: metallb
   destination:
     server: https://kubernetes.default.svc
     namespace: metallb-system
